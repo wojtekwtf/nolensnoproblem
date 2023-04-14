@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -36,6 +37,8 @@ next-env.d.ts
 
 .env
 .env.local
+=======
+>>>>>>> f5a881e (chore: forge init)
 # Compiler files
 cache/
 out/
@@ -50,6 +53,9 @@ docs/
 
 # Dotenv file
 .env
+<<<<<<< HEAD
 
 node_modules/
 .vscode/
+=======
+>>>>>>> f5a881e (chore: forge init)

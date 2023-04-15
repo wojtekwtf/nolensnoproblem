@@ -37,7 +37,7 @@ export default function Stage(props) {
             <span className="ml-4 flex min-w-0 flex-col">
               <span className="text-sm font-medium text-basil">{props.title}</span>
               <span className="text-sm text-gray-500 mb-1">{props.description}</span>
-              <ContentInput />
+              {props.component}
             </span>
           </div>
         </>

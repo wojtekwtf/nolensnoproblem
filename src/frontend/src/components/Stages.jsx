@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import Stage from "./Stage"
+import ContentInput from './ContentInput'
+import CustomSismoConnectButton from './SismoConnectButton'
+import Button from './Button'
 
 export default function Stages() {
 
@@ -15,6 +18,7 @@ export default function Stages() {
           isLast={false}
           title={"Create a message"}
           description={"Share with the world you favorite ETHTokyo story"}
+          component={<ContentInput />}
         />
         <Stage
           currentStep={currentStep}
@@ -23,6 +27,7 @@ export default function Stages() {
           isLast={false}
           title={"Verify yourself"}
           description={"Prove that you are not a bot"}
+          component={<CustomSismoConnectButton />}
         />
         <Stage
           currentStep={currentStep}
@@ -31,6 +36,7 @@ export default function Stages() {
           isLast={true}
           title={"Send the post"}
           description={"Submit your message to our Lens account"}
+          component={<Button />}
         />
       </ol>
     </nav>

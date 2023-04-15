@@ -2,7 +2,7 @@ export default function ContentInput(props) {
 
   return (
     <div className="flex items-start space-x-4 mb-4">
-      <div className="overflow-hidden rounded-lg shadow-sm ring-1 ring-inset ring-gray-900 focus-within:ring-2 focus-within:ring-[#00501E] w-full">
+      <div className="overflow-hidden rounded-lg shadow-sm ring-1 ring-inset ring-gray-900 focus-within:ring-2 focus-within:ring-gray-900 w-full">
         <label htmlFor="comment" className="sr-only">
           Add your comment
         </label>

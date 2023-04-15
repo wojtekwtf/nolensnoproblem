@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Stage from "./Stage"
 import ContentInput from './ContentInput'
 import CustomSismoConnectButton from './SismoConnectButton'
 import Button from './Button'
 import { useWindowSize } from 'react-use'
 import Confetti from 'react-confetti'
+import axios from 'axios'
 
 
 export default function Stages() {
@@ -12,6 +13,16 @@ export default function Stages() {
   const [currentStep, setCurrentStep] = useState(0)
   const [content, setContent] = useState("")
   const { width, height } = useWindowSize()
+
+  const postToLens = async () => {
+    const res = await axios.post('/api/post', { content: content })
+  }
+
+  useEffect(() => {
+    if (currentStep === 3) {
+      postToLens()
+    }
+  }, [currentStep])
 
 
   return (

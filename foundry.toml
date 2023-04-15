@@ -3,7 +3,6 @@ src = "src"
 out = "out"
 libs = ["lib"]
 
-<<<<<<< HEAD
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
 
 [rpc_endpoints]
@@ -11,6 +10,5 @@ goerli = "${MUMBAI_RPC_URL}"
 
 [etherscan]
 mumbai = { key = "${ETHERSCAN_API_KEY}" }
-=======
+
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
->>>>>>> f5a881e (chore: forge init)

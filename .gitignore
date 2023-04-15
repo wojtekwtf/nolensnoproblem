@@ -47,6 +47,7 @@ out/
 !/broadcast
 /broadcast/*/31337/
 /broadcast/**/dry-run/
+broadcast
 
 # Docs
 docs/
@@ -57,5 +58,9 @@ docs/
 
 node_modules/
 .vscode/
+<<<<<<< HEAD
 =======
 >>>>>>> f5a881e (chore: forge init)
+=======
+.DS_Store
+>>>>>>> 7f89a72 (good progress)

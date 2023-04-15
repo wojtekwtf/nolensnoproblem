@@ -1,5 +1,11 @@
 {
   "dependencies": {
-    "@openzeppelin/contracts": "^4.8.3"
+    "@openzeppelin/contracts": "^4.8.3",
+    "@sismo-core/sismo-connect-client": "^0.0.7",
+    "better-opn": "^3.0.2",
+    "ethers": "^6.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11"
   }
 }

@@ -1,0 +1,2 @@
+SemaphoreTest:testCanUpdateManager(address) (runs: 256, μ: 11652, ~: 13059)
+SemaphoreTest:testCannotUpdateWithoutManagerAccess(address) (runs: 256, μ: 24869, ~: 24869)

@@ -1,14 +1,16 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
 import Button from './Button'
 import ContentInput from './ContentInput'
+import CustomSismoConnectButton from './SismoConnectButton'
 
 const steps = [
-  { name: 'Create a message', description: 'Vitae sed mi luctus laoreet.', href: '#', status: 'current', component: <ContentInput /> },
+  { name: 'Create a message', description: 'Vitae sed mi luctus laoreet.', href: '#', status: 'complete', component: <ContentInput /> },
   {
     name: 'Verify yourself',
     description: 'Cursus semper viverra facilisis et et some more.',
     href: '#',
-    status: 'upcoming',
+    status: 'current',
+    component: <CustomSismoConnectButton />
   },
   { name: 'Send to Lens', description: 'Penatibus eu quis ante.', href: '#', status: 'upcoming' },
 ]
@@ -30,7 +32,7 @@ export default function Stage() {
                 ) : null}
                 <a href={step.href} className="group relative flex items-start">
                   <span className="flex h-9 items-center">
-                    <span className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-basil group-hover:bg-indigo-800">
+                    <span className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-basil group-hover:bg-basil">
                       <CheckIcon className="h-5 w-5 text-white" aria-hidden="true" />
                     </span>
                   </span>
@@ -53,7 +55,7 @@ export default function Stage() {
                   </span>
                   <span className="ml-4 flex min-w-0 flex-col">
                     <span className="text-sm font-medium text-basil">{step.name}</span>
-                    <span className="text-sm text-gray-500">{step.description}</span>
+                    <span className="text-sm text-gray-500 mb-1">{step.description}</span>
                     {step.component}
                   </span>
                 </a>

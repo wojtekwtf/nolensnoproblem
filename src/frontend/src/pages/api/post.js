@@ -40,7 +40,7 @@ export default async function handler(req, res) {
     const privateKey = process.env.PRIVATE_KEY;
     const wallet = new ethers.Wallet(privateKey, provider);
 
-    const contractAddress = "0x69b43710cea07fa668e6efb71073d45bbd5aec42";
+    const contractAddress = "0x71fe3ebc613e1ae452f5fe96faedbc2aabe89e7a";
     const contractABI = [{ "inputs": [{ "internalType": "address", "name": "_lensHub", "type": "address" }, { "internalType": "address", "name": "_collectModule", "type": "address" }], "stateMutability": "nonpayable", "type": "constructor" }, { "inputs": [{ "internalType": "string", "name": "postContent", "type": "string" }], "name": "post", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "setHandleTokenId", "outputs": [], "stateMutability": "nonpayable", "type": "function" }];
     const contract = new ethers.Contract(contractAddress, contractABI, wallet);
 

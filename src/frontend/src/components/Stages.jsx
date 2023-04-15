@@ -7,6 +7,7 @@ import Button from './Button'
 export default function Stages() {
 
   const [currentStep, setCurrentStep] = useState(0)
+  const [content, setContent] = useState("")
 
   return (
     <nav aria-label="Progress">
@@ -18,7 +19,7 @@ export default function Stages() {
           isLast={false}
           title={"Create a message"}
           description={"Share with the world you favorite ETHTokyo story"}
-          component={<ContentInput />}
+          component={<ContentInput content={content} setContent={setContent} />}
         />
         <Stage
           currentStep={currentStep}

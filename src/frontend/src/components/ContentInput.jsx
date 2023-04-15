@@ -1,4 +1,4 @@
-export default function ContentInput() {
+export default function ContentInput(props) {
 
   return (
     <div className="flex items-start space-x-4 mb-4">
@@ -13,7 +13,8 @@ export default function ContentInput() {
             id="comment"
             className="block w-full resize-none border-0 bg-transparent py-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
             placeholder="Add your comment..."
-            defaultValue={''}
+            value={props.content}
+            onChange={e => props.setContent(e.target.value)}
           />
 
           {/* Spacer element to match the height of the toolbar */}

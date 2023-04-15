@@ -15,6 +15,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        basil: '#00501E'
+      }
     },
   },
 }

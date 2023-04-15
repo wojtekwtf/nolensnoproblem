@@ -15,7 +15,7 @@ export default function Stages() {
 
 
   return (
-    <nav aria-label="Progress">
+    <nav aria-label="Progress" className='w-full'>
       <ol role="list" className="overflow-hidden">
         <Stage
           currentStep={currentStep}

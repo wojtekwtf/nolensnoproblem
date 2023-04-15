@@ -10,7 +10,7 @@ export default function Home() {
         <img src="/lens_logo.svg" alt="lens-logo" className="w-20 h-20" />
         <p>no problem</p>
       </div>
-      <div className="flex flex-col justify-center items-center pt-6">
+      <div className="flex flex-col justify-center items-center pt-6 w-[320px] mx-auto px-4 md:px-0">
         <Stages />
       </div>
     </div>

@@ -1,6 +1,4 @@
-import Button from "../components/Button"
-import ContentInput from "../components/ContentInput"
-import Stage from "../components/Stage"
+import Stages from "../components/Stages"
 
 
 export default function Home() {
@@ -13,7 +11,7 @@ export default function Home() {
         <p>no problem</p>
       </div>
       <div className="flex flex-col justify-center items-center pt-6">
-        <Stage />
+        <Stages />
       </div>
     </div>
   )

@@ -59,9 +59,14 @@ export default function Button(props) {
 
   return (
     <button
-      onClick={() => props.setCurrentStep(3)}
-      className="rounded-lg font-medium bg-basil text-white px-3.5 py-2.5 text-sm mx-auto"
+      onClick={() => props.postToLens()}
+      className="flex rounded-lg font-medium bg-basil text-white px-3.5 py-2.5 text-sm mx-auto"
     >
+      <div class={`spinner mr-2 ${props.loadingPost ? "block" : "hidden"}`}>
+        {/* <div class={`spinner mr-2`}> */}
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
       Post on Lens
     </button>
   )

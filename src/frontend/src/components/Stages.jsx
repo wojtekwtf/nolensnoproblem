@@ -12,18 +12,16 @@ export default function Stages() {
 
   const [currentStep, setCurrentStep] = useState(0)
   const [content, setContent] = useState("")
+  const [loadingPost, setLoadingPost] = useState(false)
+
   const { width, height } = useWindowSize()
 
   const postToLens = async () => {
-    const res = await axios.post('/api/post', { content: content })
+    setLoadingPost(true)
+    await axios.post('/api/post', { content: content })
+    setLoadingPost(false)
+    setCurrentStep(3)
   }
-
-  useEffect(() => {
-    if (currentStep === 3) {
-      postToLens()
-    }
-  }, [currentStep])
-
 
   return (
     <nav aria-label="Progress" className='w-full'>
@@ -53,7 +51,7 @@ export default function Stages() {
           isLast={true}
           title={"Send the post"}
           description={"Submit your message to our Lens account"}
-          component={<Button setCurrentStep={setCurrentStep} />}
+          component={<Button loadingPost={loadingPost} postToLens={postToLens} />}
         />
         {currentStep === 3 &&
           <div>

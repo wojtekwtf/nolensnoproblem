@@ -1,6 +1,6 @@
 // import { getSimpleAccount } from "@/utils/getSimpleAccount";
 
-export default function Button() {
+export default function Button(props) {
 
   //   const deployAcount = async () => {
 
@@ -58,13 +58,11 @@ export default function Button() {
   //   };
 
   return (
-    <>
-      <button
-        onClick={() => deployAcount()}
-        className="rounded-lg font-medium bg-[#ABFE2C] text-[#00501E] px-3.5 py-2.5 text-sm hover:bg-[#E5FFBE] mx-auto"
-      >
-        Post on Lens
-      </button>
-    </>
+    <button
+      onClick={() => props.setCurrentStep(3)}
+      className="rounded-lg font-medium bg-basil text-white px-3.5 py-2.5 text-sm mx-auto"
+    >
+      Post on Lens
+    </button>
   )
 }

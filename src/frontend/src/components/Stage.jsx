@@ -28,7 +28,7 @@ export default function Stage(props) {
           {!props.isLast ? (
             <div className="absolute left-4 top-4 -ml-px mt-0.5 h-full w-0.5 bg-gray-300" aria-hidden="true" />
           ) : null}
-          <div onClick={() => props.setCurrentStep(props.position)} className="group relative flex items-start hover:cursor-pointer" aria-current="step">
+          <div className="group relative flex items-start hover:cursor-pointer" aria-current="step">
             <span className="flex h-9 items-center" aria-hidden="true">
               <span className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-basil bg-white">
                 <span className="h-2.5 w-2.5 rounded-full bg-basil" />

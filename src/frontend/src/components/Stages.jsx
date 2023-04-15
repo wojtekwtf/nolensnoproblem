@@ -3,11 +3,16 @@ import Stage from "./Stage"
 import ContentInput from './ContentInput'
 import CustomSismoConnectButton from './SismoConnectButton'
 import Button from './Button'
+import { useWindowSize } from 'react-use'
+import Confetti from 'react-confetti'
+
 
 export default function Stages() {
 
   const [currentStep, setCurrentStep] = useState(0)
   const [content, setContent] = useState("")
+  const { width, height } = useWindowSize()
+
 
   return (
     <nav aria-label="Progress">
@@ -37,8 +42,18 @@ export default function Stages() {
           isLast={true}
           title={"Send the post"}
           description={"Submit your message to our Lens account"}
-          component={<Button />}
+          component={<Button setCurrentStep={setCurrentStep} />}
         />
+        {currentStep === 3 &&
+          <div>
+            <Confetti
+              width={width}
+              height={height}
+              numberOfPieces={400}
+              recycle={false}
+            />
+            <p>Congratulations! Your post will be soon available on our <a target='_blank' href="https://testnet.lenster.xyz/u/ethtokyo" className='font-bold'>Lens profile 🌿</a></p>
+          </div>}
       </ol>
     </nav>
   )

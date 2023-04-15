@@ -60,7 +60,7 @@ export default function Button(props) {
   return (
     <button
       onClick={() => props.postToLens()}
-      className="flex rounded-lg font-medium bg-basil text-white px-3.5 py-2.5 text-sm mx-auto"
+      className="flex rounded-lg font-medium bg-gray-900 text-white px-3.5 py-2.5 text-sm mx-auto"
     >
       <div class={`spinner mr-2 ${props.loadingPost ? "block" : "hidden"}`}>
         {/* <div class={`spinner mr-2`}> */}

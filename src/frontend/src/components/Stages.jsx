@@ -32,7 +32,7 @@ export default function Stages() {
           position={0}
           isLast={false}
           title={"Create a message"}
-          description={"Share with the world you favorite ETHTokyo story"}
+          description={"Tell the world about your funny ETHTokyo experience"}
           component={<ContentInput content={content} setContent={setContent} />}
         />
         <Stage

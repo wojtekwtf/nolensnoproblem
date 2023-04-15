@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Stage from "./Stage"
 import ContentInput from './ContentInput'
-import CustomSismoConnectButton from './SismoConnectButton'
+import VerificationButtons from './VerificationButtons'
 import Button from './Button'
 import { useWindowSize } from 'react-use'
 import Confetti from 'react-confetti'
@@ -42,7 +42,7 @@ export default function Stages() {
           isLast={false}
           title={"Verify yourself"}
           description={"Prove that you are not a bot"}
-          component={<CustomSismoConnectButton />}
+          component={<VerificationButtons />}
         />
         <Stage
           currentStep={currentStep}

@@ -52,7 +52,7 @@ export default function Stages() {
               numberOfPieces={400}
               recycle={false}
             />
-            <p>Congratulations! Your post will be soon available on our <a target='_blank' href="https://testnet.lenster.xyz/u/ethtokyo" className='font-bold'>Lens profile 🌿</a></p>
+            <p>Congratulations! Your post will be soon available on our <a target='_blank' href="https://testnet.lenster.xyz/u/ethtokyo" className='font-bold underline'>Lens profile 🌿</a></p>
           </div>}
       </ol>
     </nav>
